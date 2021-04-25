@@ -1,0 +1,996 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title> DC - App Chat</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+    
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="huro-app" class="app-wrapper">
+
+        <!-- Pageloader -->
+        <div class="pageloader is-full"></div>
+        <div class="infraloader is-full is-active"></div>
+        <div class="minimal-wrapper darker">
+
+
+            <div class="chat-app-wrapper">
+
+                <!--Header-->
+                <div class="chat-app-header">
+
+                    <!--Logo-->
+                    <a href="../index.html" class="inbox-brand">
+                        <i class="light-image fa fa-home" style="color:#FF227D"></i>
+                        <i class="dark-image fa fa-home" style="color:aliceblue"></i>
+                    </a>
+
+                    <!--Search-->
+                    <div class="search-bar">
+                        <div class="field">
+                            <div class="control has-icon">
+                                <input type="text" class="input search-input" placeholder="Search..." />
+                                <div class="form-icon">
+                                    <i data-feather="search"></i>
+                                </div>
+                                <div class="search-results has-slimscroll"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--User Settings-->
+                    <div class="user-settings">
+
+                        <!--Toolbar-->
+                        <div class="toolbar ml-auto">
+
+                            <div class="toolbar-link">
+                                <label class="dark-mode ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+                            </div>
+
+                            <div class="toolbar-notifications is-hidden-mobile">
+                                <div class="dropdown is-spaced is-dots is-right dropdown-trigger">
+                                    <div class="is-trigger" aria-haspopup="true">
+                                        <i data-feather="bell"></i>
+                                        <span class="new-indicator pulsate"></span>
+                                    </div>
+                                    <div class="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="heading">
+                                                <div class="heading-left">
+                                                    <h6 class="heading-title">Notifications</h6>
+                                                </div>
+                                                <div class="heading-right">
+                                                    <a class="notification-link" href="/admin-profile-notifications.html">See all</a>
+                                                </div>
+                                            </div>
+                                            <ul class="notification-list">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Avatar 1</span> left a comment.</p>
+                                                            <p class="time">1 hour ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Avatar 2</span> uploaded a file.</p>
+                                                            <p class="time">2 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Avatar 3</span> sent you a message.</p>
+                                                            <p class="time">2 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Avatar 4</span> left a comment.</p>
+                                                            <p class="time">3 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a class="toolbar-link right-panel-trigger" data-panel="activity-panel">
+                                <i data-feather="grid"></i>
+                            </a>
+                        </div>
+                        <!--User Menu-->
+                        <div class="dropdown is-right dropdown-trigger user-dropdown">
+                            <div class="is-trigger" aria-haspopup="true">
+                                <div class="profile-avatar">
+                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="">
+                                </div>
+                                <i data-feather="chevron-down"></i>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p class="is-size-7">Your Name</p>
+                                    </div>
+                                    <a href="#" class="dropdown-item">
+                                        <i data-feather="user"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <i data-feather="edit-2"></i>
+                                        <span>Edit Profile</span>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <i data-feather="box"></i>
+                                        <span>Projects</span>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <i data-feather="settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        <i data-feather="log-out"></i>
+                                        <span>Sign Out</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Chat app wrapper-->
+                <div class="wrapper">
+
+                    <!--Conversation List-->
+                    <!--Conversations list-->
+                    <div class="conversation-area" data-simplebar>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="1" data-detail-name="Avatar 1" data-detail-text="Product Manager">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="13">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 1</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                                    <span class="conversation-date">20m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="2" data-detail-name="avatar 2" data-detail-text="Business Analyst">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="33">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">avatar 2</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit, amet, consectetur adipisicing.</span>
+                                    <span class="conversation-date">24m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation active" data-conversation-id="3" data-detail-name="Design Group" data-detail-text="7 people are chatting">
+                            <div class="h-avatar">
+                                <span class="avatar is-fake is-h-purple">
+                                        <span>DG</span>
+                                </span>
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Design Group</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, facilis!</span>
+                                    <span class="conversation-date">31m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="4" data-detail-name="Avatar 3" data-detail-text="Software Engineer">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="0">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 3</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit amet.</span>
+                                    <span class="conversation-date">47m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="5" data-detail-name="Avatar 4" data-detail-text="Project Manager">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="21">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 4</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit amet consectetur.</span>
+                                    <span class="conversation-date">56m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="6" data-detail-name="Avatar 5" data-detail-text="Project Manager">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="9">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 5</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem, ipsum dolor sit?</span>
+                                    <span class="conversation-date">1h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="7" data-detail-name="Avatar 6" data-detail-text="UI/UX Designer">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar6.jpg" alt="" data-user-popover="7">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 6</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem, ipsum dolor sit amet consectetur.</span>
+                                    <span class="conversation-date">1h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="8" data-detail-name="Avatar 7" data-detail-text="Web Developer">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="4">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 7</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor sit amet consectetur adipisicing..</span>
+                                    <span class="conversation-date">2h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="9" data-detail-name="Avatar 8" data-detail-text="Project Manager">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="5">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 8</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum, dolor sit amet consectetur adipisicing.</span>
+                                    <span class="conversation-date">3h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="10" data-detail-name="Avatar 9" data-detail-text="Sales Manager">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="17">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 9</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                    <span class="conversation-date">3h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Conversation-->
+                        <div class="conversation" data-conversation-id="11" data-detail-name="Avatar 10" data-detail-text="UI/UX Designer">
+                            <div class="h-avatar">
+                                <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="6">
+                            </div>
+                            <div class="conversation-detail">
+                                <div class="conversation-username">Avatar 10</div>
+                                <div class="conversation-content">
+                                    <span class="conversation-message">Lorem ipsum dolor, sit.</span>
+                                    <span class="conversation-date">9h</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Conversation messages-->
+                    <div class="chat-area" data-simplebar>
+
+                        <!--Conversation 1-->
+                        <div id="webapp-conversation-1" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 1</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="13">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="13" />
+                                        <div class="chat-msg-date">Sent at 1:03pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">hey, what's up?</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/2.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">I think it's time to review those slides we talked about.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 1:22pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Yeah I know, well I feel a bit miserable about that 😂.
+                                        </div>
+                                        <div class="chat-msg-text">I was working on that till 4:00 am.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="13" />
+                                        <div class="chat-msg-date">Sent at 1:22pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Oh my god! Don't push youself that much!</div>
+                                        <div class="chat-msg-text">You got to take some rest tomorrow.</div>
+                                        <div class="chat-msg-text">What time was our meeting scheduled for?</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 1:23pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">3:15 pm I believe.
+                                        </div>
+                                        <div class="chat-msg-text">Let me check the schedule</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 2-->
+                        <div id="webapp-conversation-2" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 2</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="33">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="33" />
+                                        <div class="chat-msg-date">Sent at 9:34am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Hi, I have some feedback to share with you.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/3.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">Although, Iam not a specialist, but I reviewed those and they look great.
+                                        </div>
+                                        <div class="chat-msg-text">We should make a couple of changes though.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 9:42am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Sounds good. Wanna meet or just go through it here?</div>
+                                        <div class="chat-msg-text">I mean Iam free right now.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="33" />
+                                        <div class="chat-msg-date">Sent at 9:43am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Nah, I have a meeting that starts in 5.</div>
+                                        <div class="chat-msg-text">Let's schedule something for this afternoon.</div>
+                                        <div class="chat-msg-text">And send me a calendar invite.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 9:43am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Sounds good. Will do.</div>
+                                        <div class="chat-msg-text">Done.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 3-->
+                        <div id="webapp-conversation-3" class="chat-area-content is-active">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Design Group</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="6">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="17" />
+                                    <span>
+                                            <span>3</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="6" />
+                                        <div class="chat-msg-date">Sent at 4:15pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Just found this marketing tool.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/4.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">Features look nice. We could give it a try? Anyone want to review?</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 4:15pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Sure, I'll take a look real quick.
+                                        </div>
+                                        <div class="chat-msg-text">Iam also going to look at the available plans.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="17">
+                                        <div class="chat-msg-date">Sent at 4:27pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">I know this one, we were using it in my previous company. It's reliable and
+                                            fast 😊.</div>
+                                        <div class="chat-msg-text">I mean it's worth a try and we're in need right now.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 4:31pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Yeah but I need to test some use cases.</div>
+                                        <div class="chat-msg-text">Can't sign up before being sure.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="2" />
+                                        <div class="chat-msg-date">Sent at 4:32pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Haha, don't be scare</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="0" />
+                                        <div class="chat-msg-date">Sent at 4:32pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Yay, going chicken mode again 😂😂😂</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 4:33pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Omg, I just can't help it 😂</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="28" />
+                                        <div class="chat-msg-date">Sent at 4:39pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">This is getting funnier and funnier. You gotta love dat team 🥰</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 4-->
+                        <div id="webapp-conversation-4" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 3</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="0">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="0" />
+                                        <div class="chat-msg-date">Sent at 10:11am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Hey I have a couple of screens to show you.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400X300" data-demo-src="../assets/img/photo/6.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">This one is pretty colorful, I like it.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400X300" data-demo-src="../assets/img/photo/7.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">I like the curves in this one.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 10:44am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Looks Good.
+                                        </div>
+                                        <div class="chat-msg-text">Want to sync?</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 5-->
+                        <div id="webapp-conversation-5" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 4</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="21">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar6.jpg" alt="" data-user-popover="0" />
+                                        <div class="chat-msg-date">Sent at 11:12am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Do you have a moment?</div>
+                                        <div class="chat-msg-text">I need some help on something Iam working on.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 11:14am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Sure
+                                        </div>
+                                        <div class="chat-msg-text">I'll drop by your office.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 6-->
+                        <div id="webapp-conversation-6" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 5</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="5">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="5" />
+                                        <div class="chat-msg-date">Sent at 12:14pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Hey !.</div>
+                                        <div class="chat-msg-text">Still down for that movie?</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 12:14pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Of course, yeah!</div>
+                                        <div class="chat-msg-text">Can't wait!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 7-->
+                        <div id="webapp-conversation-7" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 6</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar6.jpg" alt="" data-user-popover="7">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="7" />
+                                        <div class="chat-msg-date">Sent at 2:32pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Look at those screens, just finished them.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/8.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/9.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/10.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">I can send you the files.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar6.jpg" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 2:37pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Looks great.
+                                        </div>
+                                        <div class="chat-msg-text">Let me review this in details.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 8-->
+                        <div id="webapp-conversation-8" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 7</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="4">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="7" />
+                                        <div class="chat-msg-date">Sent at 9:43pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Just finished implementing this one.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/11.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">I has some issues with the headers tough.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 9:43pmpm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Just in time, thanks.</div>
+                                        <div class="chat-msg-text">You have an open PR for that one?</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 9-->
+                        <div id="webapp-conversation-9" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 8</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="5">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="5" />
+                                        <div class="chat-msg-date">Sent at 9:12am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">We sould sync sometime today.</div>
+                                        <div class="chat-msg-text">When are you available?</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar1.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 9:13am</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Probably in the afternoon.</div>
+                                        <div class="chat-msg-text">I'll let you know.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 10-->
+                        <div id="webapp-conversation-10" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 9</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="17">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar5.png" alt="" data-user-popover="5" />
+                                        <div class="chat-msg-date">Sent at 5:19pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">I had a great time yesterday.</div>
+                                        <div class="chat-msg-text">Thank you for you clean presentation, it was stunning.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar4.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 6:32pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Wow, don't mention it.</div>
+                                        <div class="chat-msg-text">So happy it made you feel like that.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Conversation 11-->
+                        <div id="webapp-conversation-11" class="chat-area-content">
+                            <div class="chat-area-header">
+                                <button class="trigger conversations-mobile-trigger h-only-mobile h-only-tablet-p h-only-tablet-l">
+                                    <i data-feather="menu"></i>
+                                </button>
+                                <div class="chat-area-title">Avatar 10</div>
+                                <div class="chat-area-group">
+                                    <img class="chat-area-profile" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar3.png" alt="" data-user-popover="6">
+                                </div>
+                            </div>
+                            <div class="chat-area-main">
+                                <div class="chat-msg">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="6" />
+                                        <div class="chat-msg-date">Sent at 7:48pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">Here are some screenshots.</div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/12.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/13.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">
+                                            <img src="https://via.placeholder.com/400x300" data-demo-src="../assets/img/photo/14.jpg" alt="" />
+                                        </div>
+                                        <div class="chat-msg-text">Hope you like them.</div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg owner">
+                                    <div class="chat-msg-profile">
+                                        <img class="chat-msg-img" src="https://via.placeholder.com/150x150" data-demo-src="../assets/img/avatars/avatar2.png" alt="" data-user-popover="3" />
+                                        <div class="chat-msg-date">Sent at 10:21pm</div>
+                                    </div>
+                                    <div class="chat-msg-content">
+                                        <div class="chat-msg-text">They look great!</div>
+                                        <div class="chat-msg-text">Thanks for sharing this!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-area-footer">
+                            <div class="add-content">
+                                <div class="dropdown dropdown-trigger is-up">
+                                    <div>
+                                        <div class="button" aria-haspopup="true">
+                                            <i data-feather="plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <a class="dropdown-item">
+                                                <i data-feather="video"></i>
+                                                <div class="meta">
+                                                    <span>Video</span>
+                                                    <span>Embed a video</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item kill-drop h-modal-trigger">
+                                                <i data-feather="image"></i>
+                                                <div class="meta">
+                                                    <span>Images</span>
+                                                    <span>Upload pictures</span>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item kill-drop h-modal-trigger">
+                                                <i data-feather="link"></i>
+                                                <div class="meta">
+                                                    <span>Link</span>
+                                                    <span>Post a link</span>
+                                                </div>
+                                            </a>
+                                            <hr class="dropdown-divider">
+                                            <a href="#" class="dropdown-item kill-drop h-modal-trigger">
+                                                <i data-feather="file"></i>
+                                                <div class="meta">
+                                                    <span>File</span>
+                                                    <span>Upload a file</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-emoji">
+                                <div class="button">
+                                    <i data-feather="smile"></i>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Type something here..." />
+                        </div>
+                    </div>
+
+                    <!--Conversation Details-->
+                    <div class="detail-area" data-simplebar>
+                        <div class="chat-side-content is-single">
+                            <div class="user-pic h-avatar is-large">
+                                <span class="avatar is-fake is-h-purple">
+                                        <span>DG</span>
+                                </span>
+                                <img class="avatar is-hidden" src="https://via.placeholder.com/150x150" alt="">
+                            </div>
+                            <h4 id="user-details-name" class="user-name">Design Group</h4>
+                            <p id="user-details-title" class="user-job-title">6 people are chatting</p>
+
+                            <div class="side-actions">
+                                <a class="button h-button is-rounded">
+                                    <span class="icon is-small">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                    <span>Audio Call</span>
+                                </a>
+                                <a class="button h-button is-rounded">
+                                    <span class="icon is-small">
+                                            <i class="fas fa-video"></i>
+                                        </span>
+                                    <span>Video Call</span>
+                                </a>
+                            </div>
+
+                            <div class="detail-photos">
+                                <div class="detail-photo-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                        <path d="M21 15l-5-5L5 21"></path>
+                                    </svg>
+                                    Shared photos
+                                </div>
+                                <div class="detail-photo-grid">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/1.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/2.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/3.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/4.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/5.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/6.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/7.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/8.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/9.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/10.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/11.jpg" alt="">
+                                    <img src="https://via.placeholder.com/1600x900" data-demo-src="../assets/img/photo/12.jpg" alt="">
+                                </div>
+                                <a class="view-more">View More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <script src="../assets/js/app.js"></script>        
+        <script src="../assets/js/functions.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/components.js"></script>
+        <script src="../assets/js/popover.js"></script>
+        <script src="../assets/js/widgets.js"></script>        
+        <script src="../assets/js/touch.js"></script>
+        <script src="../assets/js/messaging-chat.js"></script>
+        <script src="../assets/js/syntax.js"></script>
+    </div>
+</body>
+
+</html>
